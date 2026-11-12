@@ -1,4 +1,6 @@
 import os
+os.environ['RENDER'] = 'true'
+import os
 import sys
 import importlib
 import asyncio
@@ -77,10 +79,13 @@ def check_startup_requirements():
     print("------------------------------------------------------------")
     env_path = os.path.join(base_dir, ".env")
     env_exists = os.path.exists(env_path)
-    if env_exists:
-        print("  🟢 .env Configuration File -> FOUND")
-        with open(env_path, "r", encoding="utf-8") as f:
-            env_content = f.read()
+        if env_exists or os.environ.get('RENDER'):
+        print("  🟢 .env Configuration File -> FOUND (or using Render Environment)")
+        if env_exists:
+            with open(env_path, "r", encoding="utf-8") as f:
+                env_content = f.read()
+        else:
+            env_content = ""
             
         token_found = False
         admin_found = False
@@ -135,7 +140,7 @@ def check_startup_requirements():
         if not env_exists or not token_found:
             print("👉 3. Configure environment settings:")
             print("   Create a '.env' file in the bot root folder containing:")
-            print("   TELEGRAM_BOT_TOKEN=8906367080:AAHNRQKZwK-9E7ybgI3ZfkLgr1j9jdVOL8I")
+            print("   TELEGRAM_BOT_TOKEN=8805827745:AAHKq8ekSvsJTe6bEdsObVk2r-xigb4Si4s")
             print("   ADMIN_IDS=ADMIN_ID_1,ADMIN_ID_2\n")
             
         print("============================================================")
