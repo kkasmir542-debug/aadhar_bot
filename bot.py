@@ -89,6 +89,11 @@ def check_startup_requirements():
             
         token_found = False
         admin_found = False
+    if not env_exists:
+        if os.environ.get('TELEGRAM_BOT_TOKEN'):
+            token_found = True
+        if os.environ.get('ADMIN_IDS'):
+            admin_found = True
         for line in env_content.splitlines():
             line = line.strip()
             if line.startswith("TELEGRAM_BOT_TOKEN="):
