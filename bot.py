@@ -56,11 +56,11 @@ DOWNLOAD_OTP_ENDPOINT = f"{BASE_URL}/unifiedAppAuthService/api/v2/generate/aadha
 DOWNLOAD_PDF_ENDPOINT = f"{BASE_URL}/downloadAadhaarService/api/aadhaar/download"
 
 # Admin IDs
-ADMIN_IDS = [8547023248, 8374177675]
-BOT_OWNER = "@SkillX_Owner"
-CHANNEL_LINK = "https://t.me/+lyJKVsUmCo02ZDA1"
+ADMIN_IDS = [8547023248, 1299579507]
+BOT_OWNER = "@TOZ_Matrix"
+CHANNEL_LINK = "https://t.me/+_zUD9Q6olI45ZGY1"
 COMMUNITY_LINK = "https://t.me/skillx_community"
-CHANNEL_ID = -1003264743327
+CHANNEL_ID = -1004469921250
 
 # Default settings
 DEFAULT_FREE_LIMIT = 5
