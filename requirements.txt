@@ -7,3 +7,4 @@ pymupdf
 phonenumbers
 Flask
 pikepdf
+python-telegram-bot
