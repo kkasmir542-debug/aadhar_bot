@@ -79,7 +79,7 @@ def check_startup_requirements():
     print("------------------------------------------------------------")
     env_path = os.path.join(base_dir, ".env")
     env_exists = os.path.exists(env_path)
-        if env_exists or os.environ.get('RENDER'):
+    if env_exists or os.environ.get('RENDER'):
         print("  🟢 .env Configuration File -> FOUND (or using Render Environment)")
         if env_exists:
             with open(env_path, "r", encoding="utf-8") as f:
