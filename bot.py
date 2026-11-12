@@ -478,7 +478,7 @@ def send_welcome_dashboard(chat_id, message_id=None):
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
     chat_id = message.chat.id
-    
+    print(f"📩 MESSAGE RECEIVED FROM: {message.chat.id}")
     # Handle referral rewards first
     parts = message.text.split()
     referrer_id = None
