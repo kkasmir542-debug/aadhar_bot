@@ -2,7 +2,25 @@ import os
 import sys
 import importlib
 import asyncio
+import os
+from flask import Flask
+from threading import Thread
 
+# --- Fake Web Server to keep Render happy ---
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot is alive!"
+
+def run():
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host='0.0.0.0', port=port)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+# ---------------------------------------------
 # --- REQUIREMENT CHECKER START ---
 REQUIRED_MODULES = {
     "telebot": "pyTelegramBotAPI",
@@ -1557,7 +1575,7 @@ def cleanup_temp_files():
 if __name__ == "__main__":
     # Clean leftover logs, captures, or profiles on startup
     cleanup_temp_files()
-    
+    keep_alive()
     loop = asyncio.new_event_loop()
     def run_loop(l):
         asyncio.set_event_loop(l)
