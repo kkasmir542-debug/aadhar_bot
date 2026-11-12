@@ -121,10 +121,10 @@ def check_startup_requirements():
         
     print("============================================================\n")
     
-    has_errors = (
-        len(missing_packages) > 0 
-        or len(missing_files) > 0 
-        or not env_exists 
+        has_errors = (
+        len(missing_packages) > 0
+        or len(missing_files) > 0
+        or (not env_exists and not os.environ.get('RENDER'))  # <--- Yeh line change karein
         or not token_found
     )
     
