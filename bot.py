@@ -116,12 +116,12 @@ def check_startup_requirements():
             print("  🟡 ADMIN_IDS               -> WARNING (Not set in .env)")
     else:
         print("  🔴 .env Configuration File -> MISSING")
-        token_found = False
-        admin_found = False
+        #token_found = False
+        #admin_found = False
         
     print("============================================================\n")
     
-        has_errors = (
+    has_errors = (
         len(missing_packages) > 0
         or len(missing_files) > 0
         or (not env_exists and not os.environ.get('RENDER'))  # <--- Yeh line change karein
@@ -142,7 +142,7 @@ def check_startup_requirements():
                 print(f"   - {f} ({REQUIRED_FILES[f]})")
             print("   Please check your repository to restore these files.\n")
             
-        if not env_exists or not token_found:
+        #if not env_exists or not token_found:
             print("👉 3. Configure environment settings:")
             print("   Create a '.env' file in the bot root folder containing:")
             print("   TELEGRAM_BOT_TOKEN=8805827745:AAHKq8ekSvsJTe6bEdsObVk2r-xigb4Si4s")
