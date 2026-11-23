@@ -18,7 +18,7 @@ BOT_TOKEN = "8805827745:AAHKq8ekSvsJTe6bEdsObVk2r-xigb4Si4s"
 ADMIN_ID = 1299579507
 CHANNEL_LINK = "xxxxxxxx"
 CHANNEL_ID = -1004469921250
-FIREBASE_DATA_CHANNEL = xxxxxxxxxx
+FIREBASE_DATA_CHANNEL = https://mojkelalelo-default-rtdb.firebaseio.com
 
 DATA_FILE = "bot_data.pkl"
 VERSION_FILE = "bot_version.txt"
