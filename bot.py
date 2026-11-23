@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 BOT_TOKEN = "8805827745:AAHKq8ekSvsJTe6bEdsObVk2r-xigb4Si4s"
 ADMIN_ID = 1299579507
 CHANNEL_LINK = "xxxxxxxx"
-CHANNEL_ID = xxxxxxxxxxx
+CHANNEL_ID = -1004469921250
 FIREBASE_DATA_CHANNEL = xxxxxxxxxx
 
 DATA_FILE = "bot_data.pkl"
