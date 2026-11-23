@@ -9,3 +9,4 @@ Flask
 pikepdf
 python-telegram-bot[job-queue]
 pyrebase
+requests>=2.32.0
