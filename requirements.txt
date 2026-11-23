@@ -8,3 +8,4 @@ phonenumbers
 Flask
 pikepdf
 python-telegram-bot[job-queue]
+pyrebase
