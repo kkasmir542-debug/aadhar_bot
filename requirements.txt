@@ -1,5 +1,5 @@
 pyTelegramBotAPI
-requests
+requests>=2.32.0
 urllib3
 python-dotenv
 ddddocr
@@ -8,5 +8,4 @@ phonenumbers
 Flask
 pikepdf
 python-telegram-bot[job-queue]
-pyrebase
-requests>=2.32.0
+pyrebase4
